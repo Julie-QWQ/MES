@@ -189,3 +189,48 @@ aside {
 .multiselect--active {
   z-index: 1000 !important;
 }
+
+// 自定义滚动条样式
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; 
+  border-radius: 4px;
+  &:hover {
+    background: #a8a8a8; 
+  }
+}
+
+// 优化 Element UI 卡片视觉
+.el-card {
+  border: none; // 去掉默认边框，用阴影代替
+  border-radius: 8px; // 增加卡片圆角
+  box-shadow: 0 1px 4px rgba(0,21,41,.08); // 默认浅阴影
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-2px); // 悬停轻微上浮
+    box-shadow: 0 12px 24px -8px rgba(0,0,0,.15); // 悬停加深阴影
+  }
+}
+
+// 优化表格视觉
+.el-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  
+  th {
+    background-color: #f8f9fa !important; // 表头背景更淡雅
+    color: #606266;
+    font-weight: 600;
+  }
+}

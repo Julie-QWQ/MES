@@ -105,6 +105,32 @@
         background-color: $base-sub-menu-hover !important;
       }
     }
+
+    // 优化菜单项
+    .el-menu-item, .el-submenu__title {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+      // 增加过渡效果
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    // 选中状态增强：增加左侧高亮条
+    .el-menu-item.is-active {
+      color: #fff !important;
+      background-color: rgba(24, 144, 255, 0.2) !important; // 选中背景色变浅且带透明度
+      position: relative;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #1890ff; // 高亮条颜色
+      }
+    }
   }
 
   .hideSidebar {

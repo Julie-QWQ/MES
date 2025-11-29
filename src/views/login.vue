@@ -164,46 +164,61 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
+  // 使用更高级的背景图或渐变覆盖
   background-image: url("../assets/images/login-background.jpg");
   background-size: cover;
+  background-position: center; 
 }
+
 .title {
   margin: 0px auto 30px auto;
   text-align: center;
-  color: #707070;
+  color: #333; // 加深标题颜色增强对比
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .login-form {
-  border-radius: 6px;
-  background: #ffffff;
-  width: 400px;
-  padding: 25px 25px 5px 25px;
+  border-radius: 10px; // 增加圆角
+  background: rgba(255, 255, 255, 0.95); // 轻微透明度
+  width: 420px; // 稍微加宽
+  padding: 35px 35px 25px 35px;
+  // 增加层级阴影，营造悬浮感
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  
   .el-input {
-    height: 38px;
+    height: 40px;
     input {
-      height: 38px;
+      height: 40px;
+      // 输入框背景色微调
+      background: #f7f9fa;
+      border: 1px solid #dcdfe6;
+      &:focus {
+        background: #fff;
+        border-color: #1890ff; // 聚焦时高亮
+      }
     }
   }
   .input-icon {
-    height: 39px;
-    width: 14px;
+    height: 40px;
+    width: 16px;
     margin-left: 2px;
+    color: #606266;
   }
 }
-.login-tip {
-  font-size: 13px;
-  text-align: center;
-  color: #bfbfbf;
-}
+
 .login-code {
   width: 33%;
-  height: 38px;
+  height: 40px;
   float: right;
   img {
     cursor: pointer;
     vertical-align: middle;
+    border-radius: 4px; // 验证码图片圆角
+    height: 40px; // 确保高度一致
   }
 }
+
 .el-login-footer {
   height: 40px;
   line-height: 40px;
@@ -211,12 +226,10 @@ export default {
   bottom: 0;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   font-family: Arial;
   font-size: 12px;
   letter-spacing: 1px;
-}
-.login-code-img {
-  height: 38px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3); // 增加文字阴影防止背景过亮看不清
 }
 </style>
